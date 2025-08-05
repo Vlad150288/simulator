@@ -8,31 +8,31 @@ const globalTotals = { // глобальный обьект для хранен�
 const arrows = { // стрелки для UI
   horizontal: `
     <div class="arrow-cont inactive">
-      <img class="arrow horizontal" src="/assets/Arrow.png"> 
+      <img class="arrow horizontal" src="./assets/Arrow.png"> 
     </div>`,
   bigDown: `
     <div class="arrow-cont inactive">
-      <img class="arrow" src="/assets/ArrowBig.png"> 
+      <img class="arrow" src="./assets/ArrowBig.png"> 
     </div>`,
   smallDown: `
     <div class="arrow-cont inactive">
-      <img class="arrow" style="left:-0.2rem" src="/assets/ArrowSmall.png"> 
+      <img class="arrow" style="left:-0.2rem" src="./assets/ArrowSmall.png"> 
     </div>`,
   smallUp: `
     <div class="arrow-cont inactive">
-      <img class="arrow vertical-up" style="left:-0.2rem" src="/assets/ArrowSmall.png"> 
+      <img class="arrow vertical-up" style="left:-0.2rem" src="./assets/ArrowSmall.png"> 
     </div>`,
   bigUp: `
     <div class="arrow-cont inactive">
-      <img class="arrow vertical-up" src="/assets/ArrowBig.png"> 
+      <img class="arrow vertical-up" src="./assets/ArrowBig.png"> 
     </div>`,
   branches3: `
     <div class="arrow-cont inactive"> 
-      <img class="arrow" style="left:0.8rem; top:-8.75rem" src="/assets/ArrowBranches3.png"> 
+      <img class="arrow" style="left:0.8rem; top:-8.75rem" src="./assets/ArrowBranches3.png"> 
     </div>`,
   branches5: `
     <div class="arrow-cont arrow-big inactive"> 
-      <img class="arrow" style="left:0.65rem; top:-13rem" src="/assets/ArrowBranches5.png"> 
+      <img class="arrow" style="left:0.65rem; top:-13rem" src="./assets/ArrowBranches5.png"> 
     </div>`
 };
 
@@ -44,7 +44,7 @@ const technologies = [ // массив технологий
       1: '-0.1%', 2: '-0.2%', 3: '-0.3%', 4: '-0.4%', 5: '-0.5%', 6: '-0.6%', 7: '-0.7%', 8: '-0.8%', 9: '-0.9%', 10: '-1.0%', 11: '-1.2%', 12: '-1.4%', 13: '-1.6%', 14: '-1.8%', 15: '-2.0%', 16: '-2.2%', 17: '-2.4%', 18: '-2.6%', 19: '-2.8%', 20: '-3.0%', 21: '-3.3%', 22: '-3.6%', 23: '-4.0%', 24: '-4.5%', 25: '-5.0%'
     },
     seasonCoins: false,
-    image: '/assets/Research_Center.png',
+    image: './assets/Research_Center.png',
     arrow: false,
     levelsCount: 25,
     rowsCount: 1,
@@ -76,7 +76,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Quenched_Blades.png',
+    image: './assets/Quenched_Blades.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -98,7 +98,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Improved_Bows.png',
+    image: './assets/Improved_Bows.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -120,7 +120,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Mounted_Combat.png',
+    image: './assets/Mounted_Combat.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -142,7 +142,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Improved_Projectiles.png',
+    image: './assets/Improved_Projectiles.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -164,7 +164,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Swift_Marching.png',
+    image: './assets/Swift_Marching.png',
     arrow: arrows.bigDown,
     levelsCount: 5,
     rowsCount: 4,
@@ -202,7 +202,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Fleet_of_Foot.png',
+    image: './assets/Fleet_of_Foot.png',
     arrow: arrows.smallDown,
     levelsCount: 5,
     rowsCount: 4,
@@ -240,7 +240,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Mounted_Combat.png',
+    image: './assets/Mounted_Combat.png',
     arrow: arrows.smallUp,
     levelsCount: 5,
     rowsCount: 4,
@@ -278,7 +278,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Reinforced_Axles.png',
+    image: './assets/Reinforced_Axles.png',
     arrow: arrows.bigUp,
     levelsCount: 5,
     rowsCount: 4,
@@ -316,7 +316,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Call_to_Arms.png',
+    image: './assets/Call_to_Arms.png',
     arrow: arrows.branches3,
     levelsCount: 10,
     rowsCount: 1,
@@ -360,7 +360,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 500, 2: 600, 3: 700, 4: 800, 5: 1000
     },
-    image: '/assets/Cutting_Corners.png',
+    image: './assets/Cutting_Corners.png',
     arrow: '',
     levelsCount: 5,
     rowsCount: 3,
@@ -390,7 +390,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000, 11: 2000, 12: 2000, 13: 2000, 14: 2000, 15: 2000
     },
-    image: '/assets/Cultural_Exchange.png',
+    image: './assets/Cultural_Exchange.png',
     arrow: arrows.branches3,
     levelsCount: 15,
     rowsCount: 3,
@@ -440,7 +440,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 500, 2: 600, 3: 700, 4: 800, 5: 1000
     },
-    image: '/assets/Leadership.png',
+    image: './assets/Leadership.png',
     arrow: '',
     levelsCount: 5,
     rowsCount: 3,
@@ -468,7 +468,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000, 11: 2000, 12: 2000, 13: 2000, 14: 2000, 15: 2000
     },
-    image: '/assets/Barbarian_Bounties.png',
+    image: './assets/Barbarian_Bounties.png',
     arrow: '',
     levelsCount: 15,
     rowsCount: 3,
@@ -498,7 +498,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Call_to_Arms.png',
+    image: './assets/Call_to_Arms.png',
     arrow: arrows.branches5,
     levelsCount: 10,
     rowsCount: 3,
@@ -547,7 +547,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000, 11: 2000, 12: 2000, 13: 2000, 14: 2000, 15: 2000
     },
-    image: '/assets/Karaku_Reports.png',
+    image: './assets/Karaku_Reports.png',
     arrow: '',
     levelsCount: 15,
     rowsCount: 3,
@@ -577,7 +577,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Cutting_Corners.png',
+    image: './assets/Cutting_Corners.png',
     arrow: '',
     levelsCount: 10,
     rowsCount: 2,
@@ -614,7 +614,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Leadership.png',
+    image: './assets/Leadership.png',
     arrow: '',
     levelsCount: 10,
     rowsCount: 2,
@@ -648,7 +648,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Quenched_Blades.png',
+    image: './assets/Quenched_Blades.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -676,7 +676,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Improved_Bows.png',
+    image: './assets/Improved_Bows.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -704,7 +704,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Mounted_Combat.png',
+    image: './assets/Mounted_Combat.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -732,7 +732,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1700, 5: 2000
     },
-    image: '/assets/Improved_Projectiles.png',
+    image: './assets/Improved_Projectiles.png',
     arrow: arrows.horizontal,
     levelsCount: 5,
     rowsCount: 4,
@@ -760,7 +760,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Starmetal_Shields.png',
+    image: './assets/Starmetal_Shields.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -794,7 +794,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Starmetal_Bracers.png',
+    image: './assets/Starmetal_Bracers.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -828,7 +828,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Starmetal_Harnesses.png',
+    image: './assets/Starmetal_Harnesses.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -862,7 +862,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Starmetal_Axles.png',
+    image: './assets/Starmetal_Axles.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -896,7 +896,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Swift_Marching.png',
+    image: './assets/Swift_Marching.png',
     arrow: arrows.bigDown,
     levelsCount: 10,
     rowsCount: 4,
@@ -935,7 +935,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Fleet_of_Foot.png',
+    image: './assets/Fleet_of_Foot.png',
     arrow: arrows.smallDown,
     levelsCount: 10,
     rowsCount: 4,
@@ -974,7 +974,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Mounted_Combat.png',
+    image: './assets/Mounted_Combat.png',
     arrow: arrows.smallUp,
     levelsCount: 10,
     rowsCount: 4,
@@ -1013,7 +1013,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Reinforced_Axles.png',
+    image: './assets/Reinforced_Axles.png',
     arrow: arrows.bigUp,
     levelsCount: 10,
     rowsCount: 4,
@@ -1052,7 +1052,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000
     },
-    image: '/assets/Larger_Camps.png',
+    image: './assets/Larger_Camps.png',
     arrow: arrows.branches3,
     levelsCount: 5,
     rowsCount: 1,
@@ -1100,7 +1100,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 2000
     },
-    image: '/assets/Runecraft.png',
+    image: './assets/Runecraft.png',
     arrow: '',
     levelsCount: 1,
     rowsCount: 3,
@@ -1128,7 +1128,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 2000, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Special_Concoctions.png',
+    image: './assets/Special_Concoctions.png',
     arrow: arrows.branches5,
     levelsCount: 10,
     rowsCount: 3,
@@ -1172,7 +1172,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 4000
     },
-    image: '/assets/Expanded_Formations.png',
+    image: './assets/Expanded_Formations.png',
     arrow: '',
     levelsCount: 1,
     rowsCount: 3,
@@ -1200,7 +1200,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Emergency_Support.png',
+    image: './assets/Emergency_Support.png',
     arrow: '',
     levelsCount: 10,
     rowsCount: 2,
@@ -1229,7 +1229,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 4000
     },
-    image: '/assets/Rapid_Retreat.png',
+    image: './assets/Rapid_Retreat.png',
     arrow: '',
     levelsCount: 1,
     rowsCount: 2,
@@ -1258,7 +1258,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Iron_Infantry.png',
+    image: './assets/Iron_Infantry.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -1307,7 +1307,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Archers_Focus.png',
+    image: './assets/Archers_Focus.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -1356,7 +1356,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Riders_Resilience.png',
+    image: './assets/Riders_Resilience.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -1405,7 +1405,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Siege_Provisions.png',
+    image: './assets/Siege_Provisions.png',
     arrow: arrows.horizontal,
     levelsCount: 10,
     rowsCount: 4,
@@ -1455,7 +1455,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Swift_Marching.png',
+    image: './assets/Swift_Marching.png',
     arrow: arrows.bigDown,
     levelsCount: 10,
     rowsCount: 4,
@@ -1489,7 +1489,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Fleet_of_Foot.png',
+    image: './assets/Fleet_of_Foot.png',
     arrow: arrows.smallDown,
     levelsCount: 10,
     rowsCount: 4,
@@ -1523,7 +1523,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Mounted_Combat.png',
+    image: './assets/Mounted_Combat.png',
     arrow: arrows.smallUp,
     levelsCount: 10,
     rowsCount: 4,
@@ -1557,7 +1557,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Reinforced_Axles.png',
+    image: './assets/Reinforced_Axles.png',
     arrow: arrows.bigUp,
     levelsCount: 10,
     rowsCount: 4,
@@ -1591,7 +1591,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Special_Concoctions.png',
+    image: './assets/Special_Concoctions.png',
     arrow: arrows.branches5,
     levelsCount: 10,
     rowsCount: 1,
@@ -1636,7 +1636,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400
     },
-    image: '/assets/Celestial_Guidance.png',
+    image: './assets/Celestial_Guidance.png',
     arrow: '',
     levelsCount: 3,
     rowsCount: 2,
@@ -1664,7 +1664,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 4000
     },
-    image: '/assets/Expanded_Formations.png',
+    image: './assets/Expanded_Formations.png',
     arrow: '',
     levelsCount: 1,
     rowsCount: 2,
@@ -1693,7 +1693,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Prise_de_Fer.png',
+    image: './assets/Prise_de_Fer.png',
     arrow: arrows.bigDown,
     levelsCount: 10,
     rowsCount: 4,
@@ -1737,7 +1737,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Mantlets.png',
+    image: './assets/Mantlets.png',
     arrow: arrows.smallDown,
     levelsCount: 10,
     rowsCount: 4,
@@ -1781,7 +1781,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Pike_Wall.png',
+    image: './assets/Pike_Wall.png',
     arrow: arrows.smallUp,
     levelsCount: 10,
     rowsCount: 4,
@@ -1825,7 +1825,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Shatterproof.png',
+    image: './assets/Shatterproof.png',
     arrow: arrows.bigUp,
     levelsCount: 10,
     rowsCount: 4,
@@ -1870,7 +1870,7 @@ const technologies = [ // массив технологий
     seasonCoins: {
       1: 1000, 2: 1200, 3: 1400, 4: 1600, 5: 1800, 6: 2000, 7: 2000, 8: 2000, 9: 2000, 10: 2000
     },
-    image: '/assets/Surprise_Strike.png',
+    image: './assets/Surprise_Strike.png',
     arrow: '',
     levelsCount: 10,
     rowsCount: 1,

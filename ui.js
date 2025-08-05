@@ -24,7 +24,7 @@ function renderUI(technologies) { // рендерим интерфейс со в
             </div>
             <div class="cost-container">
               <div class="cost-image">
-                  <img src="/assets/Crystal.png" alt="Cryst">
+                  <img src="./assets/Crystal.png" alt="Cryst">
                   <span class="crystal-center-hover"</span>
               </div>            
               <div class="cost-research" data-name="center-cost-research">${tech.levels[tech.currentLevel+1].toLocaleString('en-US')}</div>
@@ -74,7 +74,7 @@ function renderUI(technologies) { // рендерим интерфейс со в
           </div>
           <div class="cost-container">
               <div class="cost-image">
-                  <img src="/assets/Crystal.png" alt="Cryst">
+                  <img src="./assets/Crystal.png" alt="Cryst">
               </div>            
               <div class="cost-research">${getNextLevelCost(tech).toLocaleString('en-US')}</div>
               <button class="cost-btn">+</button>
