@@ -860,7 +860,10 @@ body .wrapper .main .tech-container:active, body .wrapper .main .crystal-center-
     top: 64px;
     rotate: 45deg;
     border-radius: 2rem;
-    cursor: pointer;
+    cursor: auto;
+  }
+  body .wrapper .main .tech-section .tech-container {
+    cursor: auto;
   }
 }
 
