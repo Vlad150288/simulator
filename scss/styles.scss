@@ -669,12 +669,7 @@
     font-size: 5px;
   }
 
-  body {
-    overflow-x: auto;
-    overflow-y: auto;
 
-
-  }
 }
 
 /* Стандартные телефоны (iPhone 12, Android 360–430px) */
@@ -697,12 +692,7 @@
     font-size: 5px;
   }
 
-  body {
-    overflow-x: auto;
-    overflow-y: auto;
 
-
-  }
 }
 
 /* Планшеты (iPad 768–900px) */
@@ -711,12 +701,7 @@
     font-size: 5px;
   }
 
-  body {
-    overflow-x: auto;
-    overflow-y: auto;
 
-
-  }
 }
 
 /* Планшеты 1024×600 и подобные */
@@ -726,8 +711,7 @@
   }
 
   body {
-    overflow-x: auto;
-    overflow-y: auto;
+
 
     .wrapper {
         .main .crystal-center .tech-section .crystal-center-image 
