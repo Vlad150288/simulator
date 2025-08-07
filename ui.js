@@ -92,7 +92,7 @@ function renderUI(technologies) { // рендерим интерфейс со в
   mainContainerElem.innerHTML = innerHTML
 }
 
-function renderRequirements(unmetConditions, requirementsElem, notification) { // отрисовка блока требуемых технологий
+function renderRequirements(unmetConditions, requirementsElem, notification, sectionElem) { // отрисовка блока требуемых технологий
   const unmetList = document.createElement('div') // создаём контейнер с требуемыми технологиями
   unmetList.classList.add('unmet-list') 
   let unmetConditionsStr = ``

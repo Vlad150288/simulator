@@ -54,7 +54,7 @@ function checkRequirements(technology) { // проверка требовани�
         level : condition.requiredLevel
       }) 
     }
-  }
+  }  
 
   let passed = false
   if (currRequirement.mode === 'one' && completedCondition.length > 0) { // если достаточно одного выполненного условия
@@ -62,7 +62,7 @@ function checkRequirements(technology) { // проверка требовани�
   }
   if (currRequirement.mode === 'all' && unmetConditions.length === 0) { // если должны быть выполнены все условия
       passed = true
-  }  
+  } 
   return { passed, unmetConditions, mode: currRequirement.mode } // возвращаем статус и список невыполненных требований
 }
 

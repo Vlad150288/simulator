@@ -32,7 +32,7 @@ function addTechEventListeners(technologies) { // обработчики соб�
         if (mode === 'all') { // если нужно всё изучить Requires
             notification = `<h4 class="notification">Requires</h4>`
         }
-        renderRequirements(unmetConditions, requirementsElem, notification) // передаём unmetConditions, глобальный контейнер requirementsElem, уведомление
+        renderRequirements(unmetConditions, requirementsElem, notification, sectionElem) // передаём unmetConditions, глобальный контейнер requirementsElem, уведомление
         return
       }
 
