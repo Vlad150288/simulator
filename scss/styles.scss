@@ -738,9 +738,11 @@
         top: 64px;
         rotate: 45deg;
         border-radius: 2rem;
-        cursor: pointer;
+        cursor: auto;
       }
-
+      .main .tech-section .tech-container {
+        cursor: auto;
+      }
     }
   }
 }
