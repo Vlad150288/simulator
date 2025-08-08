@@ -10,6 +10,105 @@
   html {
     font-size: 12px;
   }
+
+  // .rotate {
+  //   width: 8.35rem;
+  //   height: 8.35rem;
+  //   @include flex(column, center, center);
+  //   position: fixed;
+  //   top: 11%;
+  //   left: 5%;
+  //   font-size: 1.5rem;
+  //   border-radius: var(--rounded-lg);
+  //   cursor: pointer;
+  //   color: red;
+  //   @include dark-field();
+  //   border: 1px solid white;
+  //   transition: color 0.3s ease, border 0.3s ease;
+  // }
+
+
+  .rotate {
+    width: 12.35rem;
+    height: 12.35rem;
+    position: fixed;
+    top: 11%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    // background: rgba(33, 150, 243, 0.85);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    animation: pulse 2s infinite;
+    z-index: 9999;
+    user-select: none;
+    transform-origin: center center;
+    animation: rotatePhone 2s ease-in-out infinite;
+
+  
+
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // @keyframes pulse {
+  //   0%, 100% {
+  //     filter: grayscale(0%) brightness(1.2);
+  //   }
+  //   50% {
+  //     filter: grayscale(0%) brightness(0.8);
+  //   }
+  // }
+
+  @keyframes rotatePhone {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(90deg); }
+    70% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  // @keyframes highlight-tech-animation {
+  //   0% {
+  //     filter: grayscale(0%) brightness(1.3);
+  //     box-shadow: 0 0 0.8333rem 0.3333rem rgba(255, 0, 0, 0.6); // яркая тень
+  //   }
+  //   33% {
+  //     filter: grayscale(0%) brightness(1);
+  //     box-shadow: 0 0 0.4167rem 0.1667rem rgba(255, 0, 0, 0.2); // ослабление
+  //   }
+  //   66% {
+  //     filter: grayscale(0%) brightness(1.3);
+  //     box-shadow: 0 0 0.8333rem 0.3333rem rgba(255, 0, 0, 0.6); // снова яркая
+  //   }
+  //   100% {
+  //     filter: grayscale(0%) brightness(1);
+  //     box-shadow: none; 
+  //   }
+  // }
+
+  .rotate svg {
+    width: 24px;
+    height: 24px;
+    animation: rotateIcon 2s linear infinite;
+  }
+
+  @keyframes rotateIcon {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+  }
+
+
+
+
   
   body::before {
     content: '';
@@ -602,8 +701,8 @@
               .crystal-center-hover {
                 display: block;
                 position: absolute;
-                left: 82px;
-                top: 95px;
+                left: 6rem;
+                top: 8rem;
                 width: 17.5rem;
                 height: 17.5rem;
                 rotate: 45deg;
@@ -669,7 +768,12 @@
     font-size: 5px;
   }
 
+  body {
+    overflow-x: auto;
+    overflow-y: auto;
 
+
+  }
 }
 
 /* Стандартные телефоны (iPhone 12, Android 360–430px) */
@@ -682,7 +786,9 @@
     overflow-x: auto;
     overflow-y: auto;
 
-
+    // .rotate {
+    //   display: none;
+    // }
   }
 }
 
@@ -692,7 +798,12 @@
     font-size: 5px;
   }
 
+  body {
+    overflow-x: auto;
+    overflow-y: auto;
 
+
+  }
 }
 
 /* Планшеты (iPad 768–900px) */
@@ -701,7 +812,12 @@
     font-size: 5px;
   }
 
+  body {
+    overflow-x: auto;
+    overflow-y: auto;
 
+
+  }
 }
 
 /* Планшеты 1024×600 и подобные */
@@ -711,19 +827,10 @@
   }
 
   body {
+    overflow-x: auto;
+    overflow-y: auto;
 
-
-    .wrapper {
-        .main .crystal-center .tech-section .crystal-center-image 
-        .crystal-center-hover {
-        display: block;
-        position: absolute;
-        left: 50px;
-        top: 64px;
-        rotate: 45deg;
-        border-radius: 2rem;
-        cursor: auto;
-      }
+    body .wrapper {
       .main .tech-section .tech-container {
         cursor: auto;
       }
@@ -731,7 +838,28 @@
   }
 }
 
-  
-  
+@media (max-width: 380px) and (max-height: 680px) {
+  html {
+    font-size: 5px;
+  }
+
+  body .wrapper {
+    // .main {
+    //   width: 400%;  // увеличить ширину в 2 раза
+    //   height: 200%; // увеличить высоту в 2 раза, если нужно
+    //   transform: scale(2);
+    //   margin: 0 auto;
+    // }
+
+    .header, .footer {
+      .reset-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+
+
 
 //   sass --watch scss/styles.scss:scss/styles.css
