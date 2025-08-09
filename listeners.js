@@ -19,6 +19,12 @@ function addTechEventListeners(technologies) { // обработчики соб�
       if (techInfoElem || centerInfoElem && !costBtnElem) { // если клик на технологию, но не на кнопку, вызов модал
         mainModal()
       }    
+      
+      if (window.innerWidth < window.innerHeight) {
+        console.log(window.innerWidth, window.innerHeight)
+        const rotate = document.createElement('div')
+        rotate.classList.add('rotate')
+      }
   
       if (!costBtnElem) return  
   
