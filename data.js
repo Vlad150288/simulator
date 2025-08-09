@@ -1860,7 +1860,6 @@ const technologies = [ // массив технологий
       },
     ],
   },
-
   {
     name: 'Surprise Strike',
     bonusType: 'Damage',
@@ -1893,6 +1892,11 @@ const technologies = [ // массив технологий
         mode: 'one',
         conditions: [{ name: 'Prise de Fer', requiredLevel: 5 }, { name: 'Mantlets', requiredLevel: 5 }, { name: 'Pike Wall', requiredLevel: 5 }, { name: 'Shatterproof', requiredLevel: 5 }]
       },
+      {
+        level: 5,
+        mode: 'all',
+        conditions: [{ name: 'Swift Marching 3', requiredLevel: 10 }, { name: 'Fleet of Foot 3', requiredLevel: 10 }, { name: 'Swift Steeds 3', requiredLevel: 10 }, { name: 'Reinforced Axles 3', requiredLevel: 10 }]
+      }
     ],
   },
 ]
