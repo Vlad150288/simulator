@@ -42,12 +42,12 @@ function renderUI(technologies) { // рендерим интерфейс со в
       let iconBorder = iconBorderMap[tech.name] ?? 'tech-image'
 
       const marginMap = { // индивидуальные отступы для некоторых технологий
-        'Runecraft': 40,
-        'Expanded Formations 1': 40,
-        'Cutting Corners 1': 40,
-        'Leadership 1': 40,
-        'Barbarian Bounties': 40,
-        'Karaku Reports': 40,
+        'Runecraft': 3.35,
+        'Expanded Formations 1': 3.35,
+        'Cutting Corners 1': 3.35,
+        'Leadership 1': 3.35,
+        'Barbarian Bounties': 3.35,
+        'Karaku Reports': 3.35,
       }
       let margin = marginMap[tech.name] ?? 0 // задаём отступ
 
@@ -59,7 +59,7 @@ function renderUI(technologies) { // рендерим интерфейс со в
         innerHTML += `<div class="column-container">`
       }
       innerHTML += `      
-        <section id="${safeId}" class="tech-section ${tech.status}" style="margin-right:${margin}px;" data-name="${tech.name}">
+        <section id="${safeId}" class="tech-section ${tech.status}" style="margin-right:${margin}rem;" data-name="${tech.name}">
           <div class="tech-container" data-name="${tech.name}">
               <div class="${iconBorder}">
                   <img src="${tech.image}" height="5rem" width="5rem" alt="${tech.name}">
@@ -201,4 +201,25 @@ function updateUI(technology, section) { // обновляем интерфей�
   totalCoinsElem.textContent = globalTotals.totalCoins.toLocaleString('en-US')
 }
 
-export { renderUI, renderRequirements, unlockTechnology, updateCostReduction, updateUI }
+function showRotate() {
+  if (document.querySelector('.rotate')) return;
+  console.log(window.innerWidth, window.innerHeight)
+  const rotate = document.createElement('div')
+  rotate.classList.add('rotate')
+  rotate.innerHTML = `<div><img src="./assets/Rotate.png"></div>`
+  document.body.append(rotate)
+}
+
+function checkOrientation() {
+  if (window.innerWidth < window.innerHeight) {
+      showRotate()
+  }
+  else {
+      if (document.querySelector('.rotate')) {
+          document.querySelector('.rotate').remove()
+      }
+      // document.querySelector('.rotate')?.remove();
+  }
+}
+
+export { renderUI, renderRequirements, unlockTechnology, updateCostReduction, updateUI, checkOrientation }
