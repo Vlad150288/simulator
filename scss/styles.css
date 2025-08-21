@@ -297,7 +297,7 @@ body .wrapper .header .reset-btn, body .wrapper .footer .reset-btn {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 91%;
+  top: 90%;
   left: 85%;
   font-size: 1.5rem;
   border-radius: var(--rounded-lg);
@@ -421,7 +421,7 @@ body .wrapper .header .requirements, body .wrapper .footer .requirements {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 90%;
+  top: 89%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
