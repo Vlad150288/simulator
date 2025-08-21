@@ -1,4 +1,4 @@
-import { technologies, globalTotals } from "./data.js";
+import {technologies, globalTotals } from "./data.js";
 
 function calculateCostReduction() { // считаем скидку на исследования
   let totalCostReduction = 0
@@ -29,7 +29,7 @@ function calculateSeasonCoins(technology) { // считаем монеты се�
   return globalTotals.totalCoins
 }
 
-function checkRequirements(technology) { // проверка требований перед обновление интерфейса и дальнейшим прогрессом
+function checkRequirements(technologies, technology) { // проверка требований перед обновление интерфейса и дальнейшим прогрессом
   const nextLvl = technology.currentLevel + 1  
   let currRequirement = technology.requirements.find(req => req.level === nextLvl) // перед повышением уровня находим требования для повышения
 
@@ -66,7 +66,7 @@ function checkRequirements(technology) { // проверка требовани�
   return { passed, unmetConditions, mode: currRequirement.mode } // возвращаем статус и список невыполненных требований
 }
 
-function findTechnologiesToUnlock(selectedTechName) { // определяем, какие технологии нужно разблокировать после изучения текущей
+function findTechnologiesToUnlock(technologies, selectedTechName) { // определяем, какие технологии нужно разблокировать после изучения текущей
   const unlockTechs = [] // массив имён технологий, которые станут доступны
   for (let i = 0; i < technologies.length; i++) { // перебираем все технологии
       for (let j = 0; j < technologies[i].needForActivation.length; j++) { // у каждой проверяем, зависят ли они от selectedTechName
@@ -79,8 +79,8 @@ function findTechnologiesToUnlock(selectedTechName) { // определяем, �
   return unlockTechs
 }
 
-function getNextLevelCost(technology) { // узнаём стоимость следующего уровня технологии с учётом скидки
-  let totalCostReduction = calculateCostReduction() // сначала пересчитываем общую скидку
+function getNextLevelCost(technology, technologies) { // узнаём стоимость следующего уровня технологии с учётом скидки
+  let totalCostReduction = calculateCostReduction(technologies) // сначала пересчитываем общую скидку
   let baseCost = technology.levels[technology.currentLevel+1] // узнаём базовую стоимость следующего уровня
   let nextLvlCost
 
