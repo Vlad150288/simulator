@@ -2,7 +2,7 @@ const globalTotals = { // глобальный обьект для хранен�
   totalSumBase: 0,
   totalSum: 0,
   totalCoins: 0,
-  totalCostReduction: 0.1
+  totalCostReduction: 0.1,
 }
 
 const arrows = { // стрелки для UI
