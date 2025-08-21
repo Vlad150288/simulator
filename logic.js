@@ -82,9 +82,8 @@ function findTechnologiesToUnlock(technologies, selectedTechName) { // опре�
 function getNextLevelCost(technology, technologies) { // узнаём стоимость следующего уровня технологии с учётом скидки
   let totalCostReduction = calculateCostReduction(technologies) // сначала пересчитываем общую скидку
   let baseCost = technology.levels[technology.currentLevel+1] // узнаём базовую стоимость следующего уровня
-  let nextLvlCost
-
-  nextLvlCost = technology.name === 'Crystal Center' ? baseCost : baseCost - (baseCost * (totalCostReduction/100)) // применяем скидку, если не 'Crystal Center'
+  
+  const nextLvlCost = technology.name === 'Crystal Center' ? baseCost : baseCost - (baseCost * (totalCostReduction/100)) // применяем скидку, если не 'Crystal Center'
   return nextLvlCost
 }
 
