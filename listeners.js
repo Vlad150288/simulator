@@ -4,8 +4,8 @@ import { mainModal } from "./modal.js"
 import { requirementsElem } from "./selectors.js"
 
 function addTechEventListeners(technologies) { // обработчики событий
-  const techSectionElems = document.querySelectorAll('.tech-section');
-  const researchCostElems = document.querySelectorAll('.cost-research');    
+  const techSectionElems = document.querySelectorAll('.tech-section')
+  const researchCostElems = document.querySelectorAll('.cost-research')
   
   for (let sectionElem of techSectionElems) { // навешиваем обработчик клика на каждую секцию технологии
     sectionElem.addEventListener('click', (event) => {
@@ -18,17 +18,11 @@ function addTechEventListeners(technologies) { // обработчики соб�
       
       if (techInfoElem || centerInfoElem && !costBtnElem) { // если клик на технологию, но не на кнопку, вызов модал
         mainModal()
-      }    
-      
-      if (window.innerWidth < window.innerHeight) {
-        console.log(window.innerWidth, window.innerHeight)
-        const rotate = document.createElement('div')
-        rotate.classList.add('rotate')
       }
   
       if (!costBtnElem) return  
   
-      const { passed, unmetConditions, mode } = checkRequirements(technology) // получаем из checkRequirements массив с невыполненными техами unmetConditions, mode (нужно одно или все чтоб пойти дальше по дереву), и булевая passed
+      const { passed, unmetConditions, mode } = checkRequirements(technologies, technology) // получаем из checkRequirements массив с невыполненными техами unmetConditions, mode (нужно одно или все чтоб пойти дальше по дереву), и булевая passed
 
       if (!passed) { // если checkRequirements вернула фолс значит требование не выполнено, собираем уведомление для renderRequirements 
         let notification
@@ -46,15 +40,15 @@ function addTechEventListeners(technologies) { // обработчики соб�
           return
       }
 
-      updateUI(technology, sectionElem) // если дошли сюда обновляем UI
+      updateUI(technologies, technology, sectionElem) // если дошли сюда обновляем UI
 
       if (technology.currentLevel === 1) { // если технология === 1 уровень, получаем доступ к прокачке следующих технологий
-        const unlockTechs = findTechnologiesToUnlock(selectedTechName) // findTechnologiesToUnlock находит следующие технологии и сохраняем в массив
+        const unlockTechs = findTechnologiesToUnlock(technologies, selectedTechName) // findTechnologiesToUnlock находит следующие технологии и сохраняем в массив
         unlockTechnology(unlockTechs, techSectionElems) 
       }
   
       if (technology.costReduction) { // если технология даёт скидку на изучение технологий
-        updateCostReduction(researchCostElems)
+        updateCostReduction(technologies, researchCostElems)
       }  
     })
   }
@@ -62,18 +56,18 @@ function addTechEventListeners(technologies) { // обработчики соб�
 
 function horizontalScroll() {  // скроллим по горизонтали
   document.addEventListener('wheel', (event) => {
-    const isInsideModal = event.target.closest('.modal-cont'); 
+    const isInsideModal = event.target.closest('.modal-cont')
     if (isInsideModal) { // если курсор на модалке горизонтальный скролл отключаем  
       return;
     }  
     if (event.deltaY !== 0 && !event.shiftKey) {
-      event.preventDefault();
+      event.preventDefault()
         window.scrollBy({
         left: event.deltaY, // используем вертикальное колесо для горизонтального скролла
         behavior: 'auto'
       });
     }
-  }, { passive: false });
+  }, { passive: false })
 }
 
 function reloadPage() { // кнопка для перезагрузки страницы и сброс прогресса
@@ -83,4 +77,13 @@ function reloadPage() { // кнопка для перезагрузки стра
   })
 }
 
-export { addTechEventListeners, horizontalScroll, reloadPage }
+function disableUserActions() {
+  document.addEventListener('contextmenu', (event) => event.preventDefault());
+  document.addEventListener('keydown', (event) => {
+    if (event.ctrlKey && ['c', 'x', 's', 'u'].includes(event.key.toLowerCase())) {
+      event.preventDefault()
+    }
+  });
+}
+
+export { addTechEventListeners, horizontalScroll, reloadPage, disableUserActions }
