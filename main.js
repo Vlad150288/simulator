@@ -1,11 +1,11 @@
 import { technologies } from "./data.js";
-import { renderUI, checkOrientation } from "./ui.js"
-import { addTechEventListeners, horizontalScroll, reloadPage } from "./listeners.js"
+import { renderUI, checkOrientation, checkOrientationThrottled } from "./ui.js"
+import { addTechEventListeners, horizontalScroll, reloadPage, disableUserActions } from "./listeners.js"
 
 checkOrientation()
 horizontalScroll()
 renderUI(technologies)
 addTechEventListeners(technologies)
 reloadPage()
-window.addEventListener('resize', checkOrientation);
-window.addEventListener('orientationchange', checkOrientation);
+disableUserActions()
+window.addEventListener('resize', checkOrientationThrottled);
