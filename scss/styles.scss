@@ -5,28 +5,19 @@
     padding: 0;
     box-sizing: border-box;
     font-weight: bold;
+    user-select: none;   /* нельзя выделять */
+    -webkit-user-select: none; /* для Safari */
+    -ms-user-select: none;     /* для IE/Edge старых */
+  }
+
+  img {
+    pointer-events: none;
+    -webkit-user-drag: none;
   }
   
   html {
     font-size: 12px;
   }
-
-  // .rotate {
-  //   width: 8.35rem;
-  //   height: 8.35rem;
-  //   @include flex(column, center, center);
-  //   position: fixed;
-  //   top: 11%;
-  //   left: 5%;
-  //   font-size: 1.5rem;
-  //   border-radius: var(--rounded-lg);
-  //   cursor: pointer;
-  //   color: red;
-  //   @include dark-field();
-  //   border: 1px solid white;
-  //   transition: color 0.3s ease, border 0.3s ease;
-  // }
-
 
   .rotate {
     width: 17rem;
@@ -35,7 +26,6 @@
     top: 8%;
     left: 1%;
     transform: translate(-50%, -50%);
-    // background: rgba(33, 150, 243, 0.85);
     color: white;
     font-size: 2.5rem;
     font-weight: bold;
@@ -67,7 +57,7 @@
       opacity: 1;
     }
     100% {
-      transform: rotate(180deg);
+      transform: rotate(90deg);
       opacity: 0;
     }
   }
@@ -85,7 +75,6 @@
     background-position: center;
     z-index: -1;
     pointer-events: none;
-    // rotate: 90deg;
   }  
   
   body {
@@ -95,7 +84,6 @@
     overflow-y: hidden;
     height: 100vh;
     font-size: 0.875rem; 
-    // rotate: 90deg;
 
     .modal-techs {
       background-color: rgb(200, 233, 244, 0.7);
@@ -732,7 +720,7 @@
 
   body {
     overflow-x: auto;
-    overflow-y: auto;
+    overflow-y: auto;    
 
     .wrapper {
       .main .crystal-center .tech-section .crystal-center-image .crystal-center-hover {
@@ -741,7 +729,19 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
+      .footer .reset-btn {
+        cursor: auto;
+      }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
@@ -761,13 +761,25 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
+      .footer .reset-btn {
+        cursor: auto;
+      }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
 @media (max-width: 920px) and (orientation: landscape) {
   html {
-    font-size: 6.5px;
+    font-size: 7px;
   }
 
   body {
@@ -781,7 +793,22 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
+      .main .column-container .tech-section .cost-container .cost-btn {
+        cursor: auto;
+      }
+      .footer .reset-btn {
+        cursor: auto;
+      }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
@@ -801,7 +828,22 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
+      .main .column-container .tech-section .cost-container .cost-btn {
+        cursor: auto;
+      }
+      .footer .reset-btn {
+        cursor: auto;
+      }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
@@ -821,7 +863,22 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
+      .main .column-container .tech-section .cost-container .cost-btn {
+        cursor: auto;
+      }
+      .footer .reset-btn {
+        cursor: auto;
+      }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
@@ -841,7 +898,22 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
+      .main .column-container .tech-section .cost-container .cost-btn {
+        cursor: auto;
+      }
+      .footer .reset-btn {
+        cursor: auto;
+      }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
@@ -862,13 +934,22 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
-
-      .header, .footer {
-        .reset-btn {
-          display: none;
-        }
+      .main .column-container .tech-section .cost-container .cost-btn {
+        cursor: auto;
+      }
+      .footer .reset-btn {
+        display: none;
       }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
@@ -888,13 +969,22 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
-
-      .header, .footer {
-        .reset-btn {
-          display: none;
-        }
+      .main .column-container .tech-section .cost-container .cost-btn {
+        cursor: auto;
+      }
+      .footer .reset-btn {
+        display: none;
       }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
@@ -914,13 +1004,22 @@
       .main .column-container .tech-section .tech-container {
         cursor: auto;
       }
-
-      .header, .footer {
-        .reset-btn {
-          display: none;
-        }
+      .main .column-container .tech-section .cost-container .cost-btn {
+        cursor: auto;
+      }
+      .footer .reset-btn {
+        display: none;
       }
     }
+    .modal-techs .close-modal-btn {
+      cursor: auto;
+    }
+  }
+  body .wrapper .main .column-container .tech-section .cost-container .cost-btn,
+  body .wrapper .main .column-container .crystal-center .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .tech-section .cost-container .cost-btn,
+  body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
+    cursor: auto !important;
   }
 }
 
