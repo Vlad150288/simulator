@@ -1063,7 +1063,7 @@ body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
     cursor: auto !important;
   }
 }
-@media (max-width: 430px) {
+@media (max-width: 430px) and (orientation: landscape) {
   html {
     font-size: 5px;
   }
@@ -1095,7 +1095,7 @@ body .wrapper .main .crystal-center .crystal-center .cost-container .cost-btn {
     cursor: auto !important;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 380px) and (orientation: landscape) {
   html {
     font-size: 4px;
   }
