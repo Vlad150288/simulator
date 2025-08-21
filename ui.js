@@ -1,9 +1,9 @@
-import { technologies, globalTotals } from "./data.js";
+import { globalTotals } from "./data.js";
 import { totalSumElem, totalSumBaseElem, totalSumSavedElem, costReductionElem, requirementsElem, totalCoinsElem, mainContainerElem } from "./selectors.js"
 import { calculateCostReduction, getNextLevelCost, calculateTotalSumBase, calculateTotalSum, calculateSeasonCoins } from "./logic.js"
 
 function renderUI(technologies) { // рендерим интерфейс со всеми технологиями
-  const totalCostReduction = calculateCostReduction() // пересчитываем скидку на исследования перед отрисовкой
+  const totalCostReduction = calculateCostReduction(technologies) // пересчитываем скидку на исследования перед отрисовкой
   let innerHTML = ``
   let rows = 0 // счётчик для группировки (в одном столбце от 1 до 4 технологий)
 
@@ -155,14 +155,14 @@ function unlockTechnology(unlockTechs, techSectionElems) { // активируе
   }
 }
 
-function updateCostReduction(researchCostElems) { // обновляем цену исследований в интерфейсе с учётом новой скидки
+function updateCostReduction(technologies, researchCostElems) { // обновляем цену исследований в интерфейсе с учётом новой скидки
   for (let i = 0; i < researchCostElems.length; i++) { // проходим по всем полям стоимостей технологий
     let technology = technologies[i] // индексы совпадают с массивом technologies, потому DOM элементы и обьекты technologies связаны автоматически
     researchCostElems[i].textContent = technology.currentLevel === technology.levelsCount ? 'Completed!' : `${getNextLevelCost(technology).toLocaleString('en-US')}` // если достигли максимального уровня выводим 'Completed!', иначе пересчитываем цену для следующего уровня
   }
 }  
 
-function updateUI(technology, section) { // обновляем интерфейс после нажатия на "+"
+function updateUI(technologies, technology, section) { // обновляем интерфейс после нажатия на "+"
   const techProgressInfoElem = section.querySelector('.progress-info')
   const progressBarElem = section.querySelector('.progress-bar')
   const costResearchElem = section.querySelector('.cost-research')
@@ -178,7 +178,7 @@ function updateUI(technology, section) { // обновляем интерфей�
   globalTotals.totalSum = calculateTotalSum(technology, globalTotals.totalCostReduction) // пересчитываем сумму с учётом скидки
 
   if (technology.costReduction) { // если технология даёт скидку, пересчитываем её (центр изучения, 'Cutting Corners')
-    calculateCostReduction()
+    calculateCostReduction(technologies)
   }  
 
   if (technology.seasonCoins) {
@@ -202,24 +202,42 @@ function updateUI(technology, section) { // обновляем интерфей�
 }
 
 function showRotate() {
-  if (document.querySelector('.rotate')) return;
-  console.log(window.innerWidth, window.innerHeight)
-  const rotate = document.createElement('div')
-  rotate.classList.add('rotate')
-  rotate.innerHTML = `<div><img src="./assets/Rotate.png"></div>`
-  document.body.append(rotate)
+  if (document.querySelector('.rotate')) return
+
+  const rotateElem = document.createElement('div')
+  rotateElem.classList.add('rotate')
+  rotateElem.innerHTML = `<div><img src="./assets/Rotate.png"></div>`
+  document.body.append(rotateElem)
+
+  rotateElem.addEventListener('click', () => {
+    if (rotateElem) {
+      rotateElem.remove()
+    }
+  })
 }
 
 function checkOrientation() {
+  const rotateElem = document.querySelector('.rotate')
   if (window.innerWidth < window.innerHeight) {
-      showRotate()
+    showRotate()
   }
-  else {
-      if (document.querySelector('.rotate')) {
-          document.querySelector('.rotate').remove()
-      }
-      // document.querySelector('.rotate')?.remove();
-  }
+  else if (rotateElem) {
+    rotateElem.remove()
+  }  
+  console.log(rotateElem)
 }
 
-export { renderUI, renderRequirements, unlockTechnology, updateCostReduction, updateUI, checkOrientation }
+const checkOrientationThrottled = (() => {
+  let resizeTimeout = null // здесь таймер внутри замыкания
+
+  return () => {
+    if (resizeTimeout) return // если таймер уже запущен, выходим
+
+    resizeTimeout = setTimeout(() => {
+      checkOrientation() // вызываем основную функцию
+      resizeTimeout = null // сбрасываем таймер
+    }, 500) // интервал 500 мс
+  }
+})()
+
+export { renderUI, renderRequirements, unlockTechnology, updateCostReduction, updateUI, checkOrientation, checkOrientationThrottled }
