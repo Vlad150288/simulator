@@ -100,9 +100,9 @@ body::before {
   content: "";
   position: fixed;
   top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   background-image: url("../assets/Background.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -297,7 +297,7 @@ body .wrapper .header .reset-btn, body .wrapper .footer .reset-btn {
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 90%;
+  top: 89.7%;
   left: 85%;
   font-size: 1.5rem;
   border-radius: var(--rounded-lg);
