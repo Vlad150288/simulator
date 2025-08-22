@@ -53,7 +53,6 @@
       opacity: 0;
     }
     50% {
-      // transform: rotate(67deg);
       opacity: 1;
     }
     100% {
@@ -83,15 +82,8 @@
     font-family: sans-serif;
     min-width: 448rem;
     overflow-y: hidden;
-    // height: 100vh;
-    height: 100%;
+    height: 100vh;
     font-size: 0.875rem; 
-    
-    /* debug */
-    .header { outline: 2px solid lime; }
-    .main   { outline: 2px solid magenta; }
-    .footer { outline: 2px solid cyan; }
-
 
     .modal-techs {
       background-color: rgb(200, 233, 244, 0.7);
@@ -260,22 +252,17 @@
     }  
 
     .wrapper {
-      // min-height: 100vh;
-      // @include flex(column);
-      // flex: 1 1 auto;
-      // overflow: hidden;
-      display: grid;                           // вместо flex-колонки
-      grid-template-rows: auto 1fr auto;       // header | main | footer
-      min-height: 100dvh;                      // динамический vh на мобилках
-      overflow: hidden;        
+      min-height: 100vh;
+      @include flex(column);
+      flex: 1 1 auto;
+      overflow: hidden;
   
       .header, .footer {
         position: relative;
         width: 100%;
-        // height: 8vh;
+        height: 8vh;
         margin: 1.665rem 0;
         z-index: 0;
-        height: clamp(48px, 15dvh, 120px);
 
         .reset-btn {
           width: 8.35rem;
@@ -456,17 +443,12 @@
       }
   
       .main {
-        // @include flex(row);
-        // flex: 1;
-        // overflow: auto;
-        // will-change: transform;
-        // transform: translateZ(0);
+        @include flex(row);
+        flex: 1;
+        overflow: auto;
+        will-change: transform;
+        transform: translateZ(0);
         // margin-top: -40px;
-        min-height: 0;                // критично для корректного overflow в grid
-        overflow: auto;               // контент скроллится внутри main, а не весь экран
-        display: flex;                // если нужно центрировать контент
-        align-items: center;
-        justify-content: center;
   
         .column-container,
         .crystal-center {
