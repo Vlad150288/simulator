@@ -4,7 +4,7 @@ A web-based simulator for planning the development of the Crystal Technology Aca
 
 It helps players optimize upgrades, track resources, and plan strategies without spending crystals in the game.
 
-👉 Try it live: rok-crystal-tech-simulator.netlify.app
+👉 Try it live: https://rok-crystal-tech-simulator.netlify.app
 
 Technologies: JavaScript (ES6), HTML5, CSS3, modular architecture
 
